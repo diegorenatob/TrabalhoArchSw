@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{F1EDF8D6-F913-4E9C-9DEF-D34A047E6612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{F1EDF8D6-F913-4E9C-9DEF-D34A047E6612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{782BF583-2D57-4610-89E5-700F82F0F319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{782BF583-2D57-4610-89E5-700F82F0F319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{82CDAFD0-2D28-4417-BCAC-0E275E122A2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{82CDAFD0-2D28-4417-BCAC-0E275E122A2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{555921C4-C7FB-4FA0-BF55-29994154337C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{555921C4-C7FB-4FA0-BF55-29994154337C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{F4418545-11D6-4F0F-9696-6E69492B1782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main", "Main\Main.csproj", "{F4418545-11D6-4F0F-9696-6E69492B1782}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{53733F34-32CF-435C-BD14-C354FA8EB33A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F4418545-11D6-4F0F-9696-6E69492B1782}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4418545-11D6-4F0F-9696-6E69492B1782}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4418545-11D6-4F0F-9696-6E69492B1782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53733F34-32CF-435C-BD14-C354FA8EB33A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53733F34-32CF-435C-BD14-C354FA8EB33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53733F34-32CF-435C-BD14-C354FA8EB33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53733F34-32CF-435C-BD14-C354FA8EB33A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

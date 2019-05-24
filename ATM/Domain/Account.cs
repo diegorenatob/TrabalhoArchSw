@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Domain
 {
-    public class Account
+    public class Account : IAccount
     {
         public int AccountNumber { get; private set; }
         public decimal AvailableBalance { get; private set; }
@@ -29,3 +30,4 @@ namespace Domain
 
         public bool ValidatePin(int userPin) => userPin == Pin;
     }
+}

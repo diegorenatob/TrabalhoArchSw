@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Domain;
+using Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Persistence
 {
-    public class BankDatabase
+    public class BankDatabase : IBankDatabase
     {
-        private Account[] _accounts;
+        private IAccount[] _accounts;
 
         public BankDatabase()
         {
