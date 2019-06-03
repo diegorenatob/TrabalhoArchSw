@@ -8,7 +8,7 @@ namespace Persistence
 {
     public class BankDatabase : IBankDatabase
     {
-        private IAccount[] _accounts;
+        private Account[] _accounts;
 
         public BankDatabase()
         {

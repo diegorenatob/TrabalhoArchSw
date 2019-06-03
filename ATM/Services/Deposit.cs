@@ -12,7 +12,7 @@ namespace Services
         private const int CANCELED = 0;
 
         public Deposit(int userAccountNumber, IScreen atmScreen,
-            IBankDatabase atmBankDatabase, IKeypad atmKeypad, DepositSlot atmDepositSlot)
+            IBankDatabase atmBankDatabase, IKeypad atmKeypad, IDepositSlot atmDepositSlot)
             : base(userAccountNumber, atmBankDatabase, atmScreen)
         {
             _keypad = atmKeypad;

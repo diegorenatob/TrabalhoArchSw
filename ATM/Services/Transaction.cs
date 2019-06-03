@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Services
 {
-    public abstract class Transaction
+
+    public abstract class Transaction : ITransaction
     {
         public int AccountNumber { get; private set; }
         public IBankDatabase BankDatabase { get; private set; }

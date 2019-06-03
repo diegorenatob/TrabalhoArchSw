@@ -1,6 +1,6 @@
 ﻿namespace Interfaces
 {
-    public interface IWithdrawal
+    public interface IWithdrawal:ITransaction
     {
         void Execute();
     }

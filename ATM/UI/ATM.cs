@@ -1,4 +1,6 @@
-﻿using Interfaces;
+﻿using Domain;
+using Interfaces;
+using Services;
 using static System.Console;
 using static System.Threading.Thread;
 
@@ -37,7 +39,7 @@ namespace UI
         /// <summary>
         /// ATM's screen
         /// </summary>
-        private Screen _screen;
+        private IScreen _screen;
         /// <summary>
         /// whether user is authenticated
         /// </summary>
@@ -46,15 +48,15 @@ namespace UI
         /// <summary>
         /// no-argument ATM constructor initializes instance variables
         /// </summary>
-        public ATM()
+        public ATM(ICashDispenser cashDispenser,IBankDatabase bankDatabase,IDepositSlot depositSlot,IKeypad keypad,IScreen screen )
         {
             _userAuthenticated = false;
             _currentAccountNumber = 0;
-            _depositSlot = new DepositSlot();
-            _keypad = new Keypad();
-            _screen = new Screen();
-            _cashDispenser = new CashDispenser();
-            _bankDatabase = new BankDatabase();
+            _depositSlot = depositSlot;
+            _keypad = keypad;
+            _screen = screen;
+            _cashDispenser = cashDispenser;
+            _bankDatabase = bankDatabase;
         }
 
         private void AuthenticateUser()
@@ -74,9 +76,9 @@ namespace UI
             Sleep(3000);
         }
 
-        private Transaction CreateTransaction(MenuOption type)
+        private ITransaction CreateTransaction(MenuOption type)
         {
-            Transaction temp = null;
+            ITransaction temp = null;
 
             switch (type)
             {
@@ -97,7 +99,7 @@ namespace UI
         private void PerformTransactions()
         {
             // local variable to store transaction currently being processed
-            Transaction currentTransaction = null;
+            ITransaction currentTransaction = null;
 
             bool isUserExited = false; // user has not chosen to exit
 
