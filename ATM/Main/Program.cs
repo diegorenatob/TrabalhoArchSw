@@ -3,6 +3,8 @@ using Domain;
 using Persistence;
 using Services;
 using UI;
+using UIMobile;
+using ATM = UI.ATM;
 
 namespace Main
 {
@@ -10,9 +12,6 @@ namespace Main
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Hello World!");
-
             var atm= new ATM(new CashDispenser(), new BankDatabase(),new DepositSlot(), new Keypad(), new Screen(),new Menu());
             atm.Run();
         }

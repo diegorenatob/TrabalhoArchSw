@@ -80,25 +80,25 @@ namespace UI
             Sleep(3000);
         }
 
-        //private ITransaction CreateTransaction(MenuOption type)
-        //{
-        //    ITransaction temp = null;
+        private int TranactionNum(MenuOption type)
+        {
+            int temp=4;
 
-        //    switch (type)
-        //    {
-        //        case MenuOption.BalanceInquiry:
-        //            temp = new BalanceInquiry(_currentAccountNumber, _screen, _bankDatabase);
-        //            break;
-        //        case MenuOption.Withdrawal:
-        //            temp = new Withdrawal(_currentAccountNumber, _screen, _bankDatabase, _keypad, _cashDispenser);
-        //            break;
-        //        case MenuOption.Deposit:
-        //            temp = new Deposit(_currentAccountNumber, _screen, _bankDatabase, _keypad, _depositSlot);
-        //            break;
-        //    }
+            switch (type)
+            {
+                case MenuOption.BalanceInquiry:
+                    temp = 1;
+                    break;
+                case MenuOption.Withdrawal:
+                    temp = 2;
+                    break;
+                case MenuOption.Deposit:
+                    temp =3;
+                    break;
+            }
 
-        //    return temp;
-        //}
+            return temp;
+        }
 
         private void PerformTransactions()
         {
@@ -119,7 +119,7 @@ namespace UI
                     case MenuOption.BalanceInquiry:
                     case MenuOption.Withdrawal:
                     case MenuOption.Deposit:
-                        currentTransaction = _menu.CreateTransaction(1, _currentAccountNumber, _bankDatabase, _screen,
+                        currentTransaction = _menu.CreateTransaction(TranactionNum(menuSelect), _currentAccountNumber, _bankDatabase, _screen,
                             _keypad, _cashDispenser, _depositSlot);
                         currentTransaction.Execute();
                         break;

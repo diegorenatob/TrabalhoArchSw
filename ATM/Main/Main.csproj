@@ -10,6 +10,7 @@
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
     <ProjectReference Include="..\Persistence\Persistence.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
+    <ProjectReference Include="..\UIMobile\UIMobile\UIMobile.csproj" />
     <ProjectReference Include="..\UI\UI.csproj" />
   </ItemGroup>
 
