@@ -1,5 +1,4 @@
 ﻿using Interfaces;
-using System;
 using static System.Console;
 
 namespace Domain

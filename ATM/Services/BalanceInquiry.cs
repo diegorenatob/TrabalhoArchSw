@@ -1,7 +1,4 @@
 ﻿using Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using static System.Threading.Thread;
 namespace Services
 {
@@ -26,6 +23,14 @@ namespace Services
             screen.DisplayMessageLine(string.Empty);
 
             Sleep(5000);
+        }
+
+
+        public void SetValues(int userAccountNumber, IBankDatabase atmBankDatabase, IScreen atmScreen)
+        {
+            AccountNumber = userAccountNumber;
+            BankDatabase = atmBankDatabase;
+            Screen = atmScreen;
         }
     }
 }

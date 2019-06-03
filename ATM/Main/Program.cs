@@ -1,6 +1,7 @@
 ﻿using System;
 using Domain;
 using Persistence;
+using Services;
 using UI;
 
 namespace Main
@@ -12,7 +13,7 @@ namespace Main
 
             Console.WriteLine("Hello World!");
 
-            var atm= new ATM(new CashDispenser(), new BankDatabase(),new DepositSlot(), new Keypad(), new Screen());
+            var atm= new ATM(new CashDispenser(), new BankDatabase(),new DepositSlot(), new Keypad(), new Screen(),new Menu());
             atm.Run();
         }
     }
