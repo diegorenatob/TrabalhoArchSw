@@ -3,7 +3,6 @@ using Domain;
 using Persistence;
 using Services;
 using UI;
-using UIMobile;
 using ATM = UI.ATM;
 
 namespace Main
